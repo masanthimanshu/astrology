@@ -18,7 +18,15 @@ class _NavigationState extends State<Navigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Astrology App")),
+      appBar: AppBar(
+        title: const Text("Astrology App"),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.person_outlined),
+          ),
+        ],
+      ),
       body: _pages[_selected],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (e) => setState(() => _selected = e),
@@ -26,18 +34,18 @@ class _NavigationState extends State<Navigation> {
         items: const [
           BottomNavigationBarItem(
             label: "Home",
-            icon: Icon(Icons.home),
-            activeIcon: Icon(Icons.home_outlined),
+            activeIcon: Icon(Icons.home),
+            icon: Icon(Icons.home_outlined),
           ),
           BottomNavigationBarItem(
             label: "Chat",
-            icon: Icon(Icons.message),
-            activeIcon: Icon(Icons.message_outlined),
+            activeIcon: Icon(Icons.message),
+            icon: Icon(Icons.message_outlined),
           ),
           BottomNavigationBarItem(
             label: "Call",
-            icon: Icon(Icons.phone),
-            activeIcon: Icon(Icons.phone_outlined),
+            activeIcon: Icon(Icons.phone),
+            icon: Icon(Icons.phone_outlined),
           ),
         ],
       ),
